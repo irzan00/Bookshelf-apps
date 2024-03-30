@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', function(){
     if (isStorageExist()) {
         loadDataFromStorage();
     }
-});
+    });
 
 function addBook() {
     const bookTitle = document.getElementById('inputBookTitle').value;
     const bookAuthor = document.getElementById('inputBookAuthor').value;
-    const bookYear = document.getElementById('inputBookYear').value;
+    const bookYear = parseInt(document.getElementById('inputBookYear').value);
     const checkCompleted = document.getElementById('inputBookIsComplete').checked;
 
     const generateID = generateId();
